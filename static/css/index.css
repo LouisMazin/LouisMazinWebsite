@@ -1,0 +1,40 @@
+/* complete css file, theme in dark yellow and grey */
+body {
+    background-color: #333;
+    color: #a6a824;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #a6a824;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+    color: #a6a824;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #a6a824;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #a6a824;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #333;
+    color: #a6a824;
+    padding: 10px 0;
+    text-align: center;
+}

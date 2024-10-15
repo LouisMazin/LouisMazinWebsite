@@ -1,0 +1,66 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}Louis Mazin{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <select class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>Choisis le parent</option>
+                <option value="1"><img src="test.png" class="img-fluid">  One</option>
+                <option value="2"><img src="test.png" class="img-fluid">  Two</option>
+                <option value="3"><img src="test.png" class="img-fluid">  Three</option>
+              </select>
+        </div>
+        <div class="col-md-4">
+            <p>pour aller vers</p>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select form-select-sm" aria-label="Small select example">
+                <option selected>Choisis l'enfant</option>
+                <option value="1"><img src="test.png" class="img-fluid">  One</option>
+                <option value="2"><img src="test.png" class="img-fluid">  Two</option>
+                <option value="3"><img src="test.png" class="img-fluid">  Three</option>
+              </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="button" class="btn btn-dark"><</button>
+        </div>
+        <div class="col-md-4" rowspan="3">
+            <img src="path_to_your_image.jpg" alt="Large Image" class="img-fluid"> <!-- Large Image -->
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-dark">></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="button" class="btn btn-dark"><<</button>
+        </div>
+        <div class="col-md-4">
+            <!-- This cell is intentionally left empty as it is merged with the one above -->
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-dark">>></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button type="button" class="btn btn-dark"><<<</button>
+        </div>
+        <div class="col-md-4">
+            <!-- This cell is intentionally left empty as it is merged with the one above -->
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-dark">>>></button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
