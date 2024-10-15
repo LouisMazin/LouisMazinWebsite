@@ -1,8 +1,22 @@
-from flask import Flask, request
-import Graph
-app = Flask(__name__)
+import gradio as gr
 
-@app.route('/getWays', methods=['GET'])
-def getWays():
-    print("getWays : ", request.args.to_dict())
-    return Graph.getJSONShortestWays(request.args.get('parent'), request.args.get('child'),int(request.args.get('number')))
+def tts_fn(text):
+    # Placeholder function for text-to-speech
+    return "Generated message", None
+
+app = gr.Blocks()
+with app:
+    with gr.Tab("T"):
+        with gr.Row():
+            with gr.Column():
+                textbox = gr.TextArea(label="Text",
+                                        placeholder="Type your sentence here",
+                                        value="", elem_id=f"input")
+            with gr.Column():
+                text_output = gr.Textbox(label="Message")
+                audio_output = gr.Audio(label="Output Audio", elem_id="audio")
+                btn = gr.Button("Generate!")
+                btn.click(tts_fn,
+                            inputs=[textbox],
+                            outputs=[text_output, audio_output])
+app.launch(share=False,server_port=8000)
