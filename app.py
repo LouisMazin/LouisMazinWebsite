@@ -5,4 +5,4 @@ def greet(name):
     time.sleep(5)
     return "Hello, " + name + "!"
 
-iface = gr.Interface(fn=greet, inputs="text", outputs="text")
+app = gr.Interface(fn=greet, inputs="text", outputs="text")
