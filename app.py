@@ -1,8 +1,8 @@
-import gradio as gr
-import time
+from flask import Flask, request
+import Graph
+app = Flask(__name__)
 
-def greet(name):
-    time.sleep(5)
-    return "Hello, " + name + "!"
-
-app = gr.Interface(fn=greet, inputs="text", outputs="text")
+@app.route('/getWays', methods=['GET'])
+def getWays():
+    print("getWays : ", request.args.to_dict())
+    return Graph.getJSONShortestWays(request.args.get('parent'), request.args.get('child'),int(request.args.get('number')))
