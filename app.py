@@ -1,8 +1,8 @@
 #little gradio website
 import gradio as gr
 
-def greet(name):
-    return "Hello " + name + "!"
+def greet():
+    return "Hello !"
 
-iface = gr.Interface(fn=greet, inputs="text", outputs="text")
-iface.launch(share=False,server_port=8000)
+iface = gr.Interface(fn=greet, outputs="text")
+iface.launch(share=False,server_name="0.0.0.0",server_port=1072)
