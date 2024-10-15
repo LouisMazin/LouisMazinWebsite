@@ -14,15 +14,14 @@ items = [
 def print_selected_item():
     selected_item = item_selector.value
     selected_label.text = f"You selected: {selected_item[1]}"
-    icon_preview.source = selected_item[0]
+    icon_preview.source = f"/{selected_item[0]}"  # Properly format the image source
 
 # Create the main UI components
 ui.label("Select an item from the list:")
-item_selector = ui.select(items)
+item_selector = ui.select(items, placeholder="Choose an item")
 select_button = ui.button("Print Selected Item", on_click=print_selected_item)
 selected_label = ui.label("")
 icon_preview = ui.image("")  # Initialize an empty image
-
 
 
 
