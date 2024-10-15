@@ -1,8 +1,13 @@
 from nicegui import ui
+palList = ["Anubis","Arsox","Astegon"]
+
+def create_dropdown_items():
+    return [f'<img smrc="PalworldBreedingTree/Icons/{pokemon.lower()}.png" style="width:20px; height:20px; vertical-align:middle;"/> {pokemon}' for pokemon in palList]
+custom_dropdown_items = create_dropdown_items()
 
 ui.label('Hello NiceGUI!')
 ui.button('BUTTON', on_click=lambda: ui.notify('button was pressed'))
-ui.menu('MENU', ['one', 'two', 'three'])
+ui.select(custom_dropdown_items)
 
 
 
