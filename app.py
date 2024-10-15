@@ -19,3 +19,5 @@ with app:
                 btn.click(tts_fn,
                             inputs=[textbox],
                             outputs=[text_output, audio_output])
+                
+app.launch(share=False,server_port=8000)
