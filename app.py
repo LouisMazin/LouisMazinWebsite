@@ -18,7 +18,7 @@ def print_selected_item():
 
 # Create the main UI components
 ui.label("Select an item from the list:")
-item_selector = ui.select(items, placeholder="Choose an item")
+item_selector = ui.select(items)
 select_button = ui.button("Print Selected Item", on_click=print_selected_item)
 selected_label = ui.label("")
 icon_preview = ui.image("")  # Initialize an empty image
