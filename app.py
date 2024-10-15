@@ -5,7 +5,7 @@ def create_dropdown_items():
     return [ui.icon(f"PalworldBreedingTree/Icons/{pokemon}.png") for pokemon in palList]
 custom_dropdown_items = create_dropdown_items()
 
-ui.header("Louis Mazin's Website")
+ui.header().set_value("Louis Mazin's Website")
 ui.select(palList)
 
 
