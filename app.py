@@ -2,15 +2,13 @@ from nicegui import ui
 import os
 
 # Path to the folder containing the icons
-icon_folder = 'icons'
+icon_folder = ".\PalworldBreedingTree\Icons/"
 
 # Sample list of items with paths to the icons and their corresponding text
 items = [
-    (os.path.join(icon_folder, "apple.png"), "Apple"),
-    (os.path.join(icon_folder, "banana.png"), "Banana"),
-    (os.path.join(icon_folder, "grapes.png"), "Grapes"),
-    (os.path.join(icon_folder, "strawberry.png"), "Strawberry"),
-    (os.path.join(icon_folder, "pineapple.png"), "Pineapple")
+    (os.path.join(icon_folder, "Anubis.png"), "Anubis"),
+    (os.path.join(icon_folder, "Arsox.png"), "Arsox"),
+    (os.path.join(icon_folder, "Astegon.png"), "Astegon")
 ]
 
 def print_selected_item():
