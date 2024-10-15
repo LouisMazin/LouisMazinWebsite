@@ -2,7 +2,7 @@ from nicegui import ui
 
 ui.label('Hello NiceGUI!')
 ui.button('BUTTON', on_click=lambda: ui.notify('button was pressed'))
-ui.menu('MENU', ['one', 'two', 'three'], on_change=lambda value: ui.notify(f'menu changed to {value}'))
+ui.menu('MENU', ['one', 'two', 'three'])
 
 
 
