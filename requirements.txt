@@ -1,5 +1,4 @@
-os
+gunicorn
 sys
 django
 pathlib
-gunicorn
