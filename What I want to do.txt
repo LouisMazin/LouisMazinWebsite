@@ -1,0 +1,2 @@
+With flasks, one index.html
+and multiple .py for each tabs (1 today -> palworld breeding tree)
